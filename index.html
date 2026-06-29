@@ -1,0 +1,2092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RESAYLE Laundry & General Supplies — Premium Laundry & Dry Cleaning</title>
+<meta name="description" content="Professional laundry and dry cleaning services. Free pickup and delivery. Express 24-hour turnaround. Serving homes, hotels, and businesses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="//wa.me">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"></noscript>
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --navy: #0A1F44;
+    --navy-light: #122B5C;
+    --green: #1A6B4A;
+    --green-light: #22855C;
+    --green-pale: #E8F5EF;
+    --gold: #B8952A;
+    --gold-light: #D4AF6A;
+    --gold-pale: #F5EDD6;
+    --black: #0A0A0A;
+    --off-white: #FAFAF8;
+    --gray-100: #F2F0EC;
+    --gray-300: #C8C4BC;
+    --gray-500: #8A8680;
+    --gray-700: #3A3835;
+    --text: #1A1A18;
+    --wa: #25D366;
+    --radius: 2px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--off-white);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  #main-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 40px 12px;
+    min-height: 138px;
+    background: rgba(250,250,248,0.98);
+    border-bottom: 0.5px solid rgba(10,31,68,0.08);
+  }
+
+  @supports (backdrop-filter: blur(1px)) {
+    #main-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+  }
+
+  #main-nav .logo-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 0.22em;
+    color: var(--black);
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.82), rgba(250,250,248,0.18) 72%, transparent 100%);
+  }
+
+  #main-nav .logo-mark .logo-img {
+    height: 70px;
+    width: auto;
+    mix-blend-mode: multiply;
+    -webkit-mask-image: radial-gradient(ellipse 88% 82% at 50% 50%, black 50%, transparent 100%);
+    mask-image: radial-gradient(ellipse 88% 82% at 50% 50%, black 50%, transparent 100%);
+  }
+
+  #main-nav .nav-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 1120px);
+  }
+
+  #main-nav .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+
+  #main-nav .nav-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 28px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray-700);
+    text-decoration: none;
+    transition: color 0.2s, background 0.2s, transform 0.2s;
+  }
+
+  #main-nav .nav-links a:hover,
+  #main-nav .nav-links a.active {
+    color: var(--navy);
+    background: rgba(10,31,68,0.06);
+  }
+
+  #main-nav .nav-links a.nav-whatsapp {
+    background: rgba(37,211,102,0.12);
+    color: #13783B;
+  }
+
+  #main-nav .nav-links a.nav-whatsapp:hover {
+    background: var(--wa);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  #main-nav .nav-cta {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    background: var(--wa);
+    color: #fff;
+    text-decoration: none;
+    padding: 9px 18px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: all 0.2s;
+  }
+
+  #main-nav .nav-cta:hover { background: #1FAD55; transform: translateY(-1px); }
+  #main-nav .nav-cta svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 204px 40px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(10,31,68,0.04) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 1s 0.1s forwards;
+  }
+
+  .hero-logo {
+    height: min(28vw, 240px);
+    min-height: 150px;
+    width: auto;
+    padding: 10px;
+    border-radius: 18px;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.86), rgba(232,245,239,0.34) 66%, transparent 100%);
+    margin-bottom: 40px;
+    mix-blend-mode: multiply;
+    -webkit-mask-image: radial-gradient(ellipse 88% 82% at 50% 50%, black 45%, transparent 100%);
+    mask-image: radial-gradient(ellipse 88% 82% at 50% 50%, black 45%, transparent 100%);
+    opacity: 0;
+    animation: fadeUp 1s 0.2s forwards;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(52px, 8vw, 96px);
+    line-height: 1.0;
+    letter-spacing: -0.01em;
+    color: var(--black);
+    max-width: 820px;
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 1s 0.4s forwards;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--navy);
+  }
+
+  .hero .subhead {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--gray-700);
+    max-width: 540px;
+    margin-bottom: 52px;
+    opacity: 0;
+    animation: fadeUp 1s 0.6s forwards;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeUp 1s 0.8s forwards;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--navy);
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.25s;
+    min-height: 44px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover { background: var(--navy-light); transform: translateY(-2px); }
+
+  .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--wa);
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.25s;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+    min-height: 44px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-whatsapp:hover { background: #1FAD55; transform: translateY(-2px); box-shadow: 0 6px 28px rgba(37,211,102,0.4); }
+  .btn-whatsapp svg, .btn-primary svg { width: 16px; height: 16px; }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    opacity: 0;
+    animation: fadeIn 1s 1.4s forwards;
+  }
+
+  .hero-scroll span {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray-500);
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--navy), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  /* ── DIVIDER ── */
+  .gold-divider {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 40px;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  .gold-divider::before, .gold-divider::after {
+    content: '';
+    flex: 1;
+    height: 0.5px;
+    background: var(--navy);
+    opacity: 0.2;
+  }
+
+  .gold-divider span {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.5;
+    white-space: nowrap;
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 100px 40px; scroll-margin-top: 152px; }
+  .locations-strip { scroll-margin-top: 152px; }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1.1;
+    color: var(--black);
+    margin-bottom: 20px;
+  }
+
+  .section-body {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--gray-700);
+    max-width: 540px;
+  }
+
+  /* ── BENEFITS ── */
+  .benefits {
+    background: var(--navy);
+    color: #fff;
+  }
+
+  .benefits-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1px;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .benefit-card {
+    padding: 60px 48px;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.3s;
+  }
+
+  .benefit-card:hover { background: rgba(26,107,74,0.12); }
+
+  .benefit-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.08);
+    line-height: 1;
+    margin-bottom: 24px;
+  }
+
+  .benefit-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 14px;
+  }
+
+  .benefit-card p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.55);
+  }
+
+  /* ── SERVICES ── */
+  .services-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .services-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 72px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px;
+    background: var(--gray-300);
+  }
+
+  .service-item {
+    background: var(--off-white);
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: background 0.2s;
+  }
+
+  .service-item:hover { background: var(--green-pale); }
+
+  .service-icon {
+    width: 36px;
+    height: 36px;
+    color: var(--navy);
+  }
+
+  .service-item h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--black);
+  }
+
+  .service-item p {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--gray-500);
+  }
+
+  /* ── FEATURES ── */
+  .features-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 48px;
+    margin-top: 72px;
+  }
+
+  .feature {
+    border-top: 0.5px solid var(--navy);
+    opacity: 0.9;
+    padding-top: 32px;
+  }
+
+  .feature .feat-num {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--green);
+    margin-bottom: 20px;
+  }
+
+  .feature h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 26px;
+    color: var(--black);
+    margin-bottom: 14px;
+  }
+
+  .feature p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--gray-500);
+  }
+
+  /* ── EMOTIONAL ── */
+  .emotional {
+    background: var(--gray-100);
+    text-align: center;
+  }
+
+  .emotional-inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .emotional blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(28px, 4vw, 48px);
+    line-height: 1.3;
+    color: var(--black);
+    margin: 32px 0 24px;
+  }
+
+  .emotional blockquote span { color: var(--navy); }
+
+  .emotional .em-sub {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--gray-500);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── PROOF ── */
+  .proof-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .proof-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 40px;
+    margin-top: 64px;
+  }
+
+  .proof-stat {
+    text-align: center;
+  }
+
+  .proof-stat .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    font-weight: 300;
+    color: var(--black);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .proof-stat .stat-num span { color: var(--navy); }
+
+  .proof-stat p {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray-500);
+    font-weight: 400;
+  }
+
+  .proof-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 60px;
+    justify-content: center;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: 0.5px solid var(--gray-300);
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: var(--gray-700);
+    background: #fff;
+  }
+
+  .badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--navy);
+    flex-shrink: 0;
+  }
+
+  /* ── FINAL CTA ── */
+  .final-cta {
+    background: var(--navy);
+    text-align: center;
+    padding: 120px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(26,107,74,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .final-cta-inner {
+    position: relative;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .final-cta h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .final-cta h2 em { font-style: italic; color: rgba(255,255,255,0.5); }
+
+  .final-cta p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 52px;
+  }
+
+  .cta-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .btn-whatsapp-lg {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--wa);
+    color: #fff;
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.25s;
+    box-shadow: 0 0 40px rgba(37,211,102,0.25);
+  }
+
+  .btn-whatsapp-lg:hover { background: #1FAD55; transform: translateY(-2px); box-shadow: 0 6px 40px rgba(37,211,102,0.4); }
+  .btn-whatsapp-lg svg { width: 18px; height: 18px; }
+
+  .cta-note {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.08em;
+    margin-top: 8px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    border-top: 0.5px solid rgba(255,255,255,0.06);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  footer .foot-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  footer .foot-tag {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: rgba(255,255,255,0.2);
+    text-transform: uppercase;
+  }
+
+  footer .foot-links {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+
+  footer .foot-links a {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  footer .foot-links a:hover { color: rgba(255,255,255,0.7); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* ── LOCATIONS ── */
+  .locations-strip {
+    background: var(--navy);
+    padding: 60px 40px;
+  }
+
+  .locations-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .locations-left span { display: block; }
+
+  .locations-cards {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .loc-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    border: 0.5px solid rgba(255,255,255,0.15);
+    border-radius: 4px;
+    transition: border-color 0.2s, background 0.2s;
+    cursor: default;
+  }
+
+  .loc-card:hover {
+    border-color: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.05);
+  }
+
+  .loc-pin {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .loc-pin svg { width: 13px; height: 13px; color: rgba(255,255,255,0.6); }
+
+  .loc-card h5 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1;
+  }
+
+  .loc-card span {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+  }
+
+  .loc-card .loc-badge {
+    font-size: 9px;
+    background: var(--green);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 20px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 4px;
+    display: inline-block;
+  }
+
+  /* ── BOOKING FORM ── */
+  .booking-section {
+    background: var(--off-white);
+    padding: 100px 40px;
+    position: relative;
+  }
+
+  .booking-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--navy), transparent);
+    opacity: 0.15;
+  }
+
+  .booking-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .booking-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .booking-form {
+    background: #fff;
+    border: 0.5px solid var(--gray-300);
+    border-radius: 8px;
+    padding: 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .booking-form::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--navy), var(--green), var(--navy));
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form-field.full { grid-column: 1 / -1; }
+
+  .form-field label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gray-700);
+  }
+
+  .form-field label .req { color: var(--green); margin-left: 2px; }
+
+  .form-field input,
+  .form-field textarea {
+    width: 100%;
+    padding: 13px 16px;
+    border: 0.5px solid var(--gray-300);
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--text);
+    background: var(--off-white);
+    transition: border-color 0.2s, background 0.2s;
+    outline: none;
+    -webkit-appearance: none;
+    min-height: 44px;
+  }
+
+  .form-field input:focus,
+  .form-field textarea:focus {
+    border-color: var(--navy);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(10,31,68,0.06);
+  }
+
+  .form-field input::placeholder,
+  .form-field textarea::placeholder { color: var(--gray-300); }
+
+  .form-field textarea { resize: vertical; min-height: 100px; line-height: 1.6; }
+
+  .select-wrapper { position: relative; }
+
+  .select-wrapper::after {
+    content: '';
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid var(--navy);
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  .form-field select {
+    width: 100%;
+    padding: 13px 40px 13px 16px;
+    border: 0.5px solid var(--gray-300);
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--text);
+    background: var(--off-white);
+    transition: border-color 0.2s, background 0.2s;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    min-height: 44px;
+  }
+
+  .form-field select:focus {
+    border-color: var(--navy);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(10,31,68,0.06);
+  }
+
+  .form-field select option { font-weight: 300; }
+  .form-field select.placeholder-active { color: var(--gray-300); }
+
+  /* Pricing section - ensure native dropdowns work */
+  #category, #item, #customer-branch {
+    appearance: auto !important;
+    -webkit-appearance: menulist !important;
+    background-image: none !important;
+    padding-right: 13px !important;
+    cursor: pointer;
+  }
+
+  .form-field input[type="date"],
+  .form-field input[type="time"] { color: var(--text); }
+
+  .form-section-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 36px 0 28px;
+  }
+
+  .form-section-divider span {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--navy);
+    white-space: nowrap;
+    opacity: 0.6;
+  }
+
+  .form-section-divider::before,
+  .form-section-divider::after {
+    content: '';
+    flex: 1;
+    height: 0.5px;
+    background: var(--gray-300);
+  }
+
+  .form-submit-area {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .btn-submit-wa {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: var(--wa);
+    color: #fff;
+    padding: 18px 48px;
+    border-radius: 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s;
+    box-shadow: 0 4px 28px rgba(37,211,102,0.28);
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .btn-submit-wa:hover {
+    background: #1FAD55;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 36px rgba(37,211,102,0.4);
+  }
+
+  .btn-submit-wa svg { width: 18px; height: 18px; }
+
+  .submit-note {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--gray-500);
+    text-align: center;
+    max-width: 360px;
+    line-height: 1.6;
+  }
+
+  /* ── MOBILE ── */
+  .hamburger {
+    display: none;
+    position: absolute;
+    right: 24px;
+    top: 30px;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--navy);
+    transition: all 0.3s;
+  }
+  .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
+
+  .mobile-nav {
+    display: none;
+    position: fixed;
+    top: 86px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    flex-direction: column;
+    background: rgba(250,250,248,0.98);
+    border-top: 0.5px solid var(--gray-300);
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .mobile-nav.open { max-height: 540px; }
+  .mobile-nav a {
+    padding: 16px 40px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray-700);
+    text-decoration: none;
+    border-bottom: 0.5px solid var(--gray-100);
+  }
+  .mobile-nav a:hover { color: var(--navy); }
+
+  @media (max-width: 900px) {
+    #main-nav .nav-row, #main-nav .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    .mobile-nav { display: flex; }
+    #main-nav { min-height: 70px; padding: 8px 20px; }
+    #main-nav .logo-mark { padding: 2px 6px; gap: 8px; }
+    #main-nav .logo-mark .logo-img { height: 48px; }
+    .hero { padding: 100px 20px 60px; }
+    section { padding: 60px 20px; }
+    .services-header { grid-template-columns: 1fr; gap: 24px; }
+    .form-row { grid-template-columns: 1fr; }
+    .booking-form { padding: 28px 20px; }
+    .locations-inner { grid-template-columns: 1fr; gap: 28px; }
+    .locations-cards { justify-content: flex-start; }
+    footer { flex-direction: column; align-items: flex-start; padding: 28px 20px; }
+    #pricing { padding: 60px 20px !important; }
+    #pricing .pricing-steps,
+    #pricing .pricing-layout,
+    #pricing .pricing-fields { grid-template-columns: 1fr !important; }
+    #pricing #cart-panel { position: static !important; }
+    #pricing .service-options { grid-template-columns: 1fr !important; }
+    .checkout-form { grid-template-columns: 1fr !important; }
+    .checkout-form > div { grid-column: 1 / -1 !important; }
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 44px; }
+    .hero-logo { height: 150px; min-height: 0; }
+    .hero-actions { flex-direction: column; width: 100%; }
+    .hero-actions a { width: 100%; justify-content: center; }
+    .benefit-card { padding: 40px 28px; }
+    .proof-grid { grid-template-columns: 1fr 1fr; }
+    #pricing .qty-add { grid-template-columns: 124px minmax(0, 1fr) !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="logo-mark" aria-label="RESAYLE Laundry home">
+    <img src="assets/logo/logo.webp" alt="RESAYLE Laundry & General Supplies" class="logo-img" decoding="async" />
+  </a>
+  <div class="nav-row" aria-label="Main navigation">
+    <ul class="nav-links">
+      <li><a href="#home" data-nav-link>Home</a></li>
+      <li><a href="#benefits" data-nav-link>Why Us</a></li>
+      <li><a href="#services" data-nav-link>Services</a></li>
+      <li><a href="#how-it-works" data-nav-link>Process</a></li>
+      <li><a href="#branches" data-nav-link>Branches</a></li>
+      <li><a href="#pricing" data-nav-link>Pricing</a></li>
+      <li><a href="#track" data-nav-link>Track</a></li>
+      <li><a href="#booking" data-nav-link>Book</a></li>
+      <li><a href="https://wa.me/255713438485" class="nav-whatsapp" target="_blank" rel="noopener">WhatsApp</a></li>
+    </ul>
+  </div>
+  <a href="https://wa.me/255713438485" class="nav-cta" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="#home">Home</a>
+  <a href="#benefits">Why Us</a>
+  <a href="#services">Services</a>
+  <a href="#how-it-works">Process</a>
+  <a href="#branches">Branches</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#track">Track</a>
+  <a href="#booking">Book</a>
+  <a href="https://wa.me/255713438485" target="_blank">WhatsApp</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <span class="hero-eyebrow">Zanzibar · Nungwi · Mbweni · Taveta</span>
+  <img src="assets/logo/logo.webp" alt="RESAYLE Laundry & General Supplies" class="hero-logo" decoding="async" />
+  <h1>Freshness <em>delivered.</em><br>Every time.</h1>
+  <p class="subhead">Professional laundry and dry cleaning across Zanzibar — with free doorstep pickup and delivery, express 24-hour turnaround, and care your fabrics deserve.</p>
+  <div class="hero-actions">
+    <a href="#booking" class="btn-primary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      Book a Pickup
+    </a>
+    <a href="https://wa.me/255713438485" class="btn-whatsapp" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Book via WhatsApp
+    </a>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div style="padding: 0 40px;">
+  <div class="gold-divider"><span>One Call. Cleans It All.</span></div>
+</div>
+
+<!-- BENEFITS -->
+<section class="benefits" id="benefits">
+  <div class="benefits-grid">
+    <div class="benefit-card reveal">
+      <div class="benefit-number">01</div>
+      <h3>Free Pickup & Delivery</h3>
+      <p>We come to your door, collect your laundry, clean it professionally, and return it fresh — at no extra charge. You don't move. We do.</p>
+    </div>
+    <div class="benefit-card reveal">
+      <div class="benefit-number">02</div>
+      <h3>Express 24-Hour Service</h3>
+      <p>Need it fast? Our express turnaround gets your laundry back in 24 hours. Our Nungwi branch operates around the clock, seven days a week.</p>
+    </div>
+    <div class="benefit-card reveal">
+      <div class="benefit-number">03</div>
+      <h3>Hotels, Homes & Businesses</h3>
+      <p>From a single shirt to hundreds of hotel linens — we handle volume and care with equal precision. Trusted by Zanzibar's hospitality industry.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" style="background: var(--off-white);">
+  <div class="services-wrap">
+    <div class="services-header reveal">
+      <div>
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Every fabric.<br>Every occasion.</h2>
+      </div>
+      <p class="section-body">From daily wear to delicate fabrics, hotel linens to dry-clean-only formalwear — handled with the expertise and care each item deserves.</p>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-item">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+        <h4>Wash & Dry</h4>
+        <p>Professional machine washing and careful drying for everyday garments and household items.</p>
+      </div>
+      <div class="service-item">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        <h4>Dry Cleaning</h4>
+        <p>Specialist care for suits, formal dresses, and delicate items that require chemical-free treatment.</p>
+      </div>
+      <div class="service-item">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M3 3h18M3 21h18M9 3v18M15 3v18"/></svg>
+        <h4>Ironing & Folding</h4>
+        <p>Crisp pressing and neat folding — shirts, trousers, uniforms, and linens ready to use immediately.</p>
+      </div>
+      <div class="service-item">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <h4>Stain Removal</h4>
+        <p>Targeted treatment for oil, food, grass, and other stubborn marks — without fabric damage.</p>
+      </div>
+      <div class="service-item">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <h4>Hotel Linens</h4>
+        <p>Bulk laundry solutions for hotels, resorts, and guesthouses — consistent quality, every delivery.</p>
+      </div>
+      <div class="service-item">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M20 12V22H4V12M22 7H2v5h20V7zM12 22V7M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
+        <h4>Delicate Fabric Care</h4>
+        <p>Gentle handling for silk, lace, cashmere, and fine fabrics — by experienced, careful hands.</p>
+      </div>
+    </div>
+    <div style="margin-top: 48px; text-align: center;">
+      <a href="#pricing" class="btn-primary" style="display: inline-flex;">View Full Price List →</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works" style="background: var(--gray-100);">
+  <div class="features-wrap">
+    <div class="reveal">
+      <span class="section-label">How It Works</span>
+      <h2 class="section-title">Simple. Precise.<br>Seamless.</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature reveal">
+        <span class="feat-num">01 — BOOK</span>
+        <h3>One call or message</h3>
+        <p>Fill in our booking form or send a WhatsApp message. Tell us what you need and where you are. We confirm your pickup time — no apps, no accounts.</p>
+      </div>
+      <div class="feature reveal">
+        <span class="feat-num">02 — COLLECT</span>
+        <h3>We come to your door</h3>
+        <p>Our team arrives at the agreed time, collects your laundry, and issues you a receipt with your order number for tracking — free of charge.</p>
+      </div>
+      <div class="feature reveal">
+        <span class="feat-num">03 — CLEAN</span>
+        <h3>Professional care, every item</h3>
+        <p>Each garment and linen is sorted, treated, and cleaned using the right method for its fabric type. Express or standard — your choice.</p>
+      </div>
+      <div class="feature reveal">
+        <span class="feat-num">04 — DELIVER</span>
+        <h3>Back to you, perfectly done</h3>
+        <p>Clean, pressed, neatly packaged — delivered to your door on schedule. Track your order live using your order number at any time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMOTIONAL -->
+<section class="emotional">
+  <div class="emotional-inner reveal">
+    <span class="section-label">The Promise</span>
+    <blockquote>
+      "Your clothes carry your story.<br>
+      We make sure they tell it <span>perfectly.</span>"
+    </blockquote>
+    <p class="em-sub">Trusted by households, hotels and businesses across Zanzibar</p>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section id="proof" style="background: var(--off-white);">
+  <div class="proof-wrap">
+    <div class="reveal">
+      <span class="section-label">Why RESAYLE</span>
+      <h2 class="section-title">Trusted. Precise.<br>Professional.</h2>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-stat reveal">
+        <div class="stat-num">24<span>h</span></div>
+        <p>Express turnaround</p>
+      </div>
+      <div class="proof-stat reveal">
+        <div class="stat-num">3<span>×</span></div>
+        <p>Branches in Zanzibar</p>
+      </div>
+      <div class="proof-stat reveal">
+        <div class="stat-num">FREE<span>.</span></div>
+        <p>Pickup & delivery</p>
+      </div>
+      <div class="proof-stat reveal">
+        <div class="stat-num">24<span>/7</span></div>
+        <p>Nungwi branch open</p>
+      </div>
+    </div>
+    <div class="proof-badges reveal">
+      <div class="badge">Free Pickup & Delivery</div>
+      <div class="badge">Hotel & Hospitality Linen</div>
+      <div class="badge">Delicate Fabric Specialists</div>
+      <div class="badge">Express 24-Hour Service</div>
+      <div class="badge">Stain Removal Experts</div>
+      <div class="badge">Zanzibar Based & Trusted</div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANCHES -->
+<div class="locations-strip" id="branches">
+  <div class="locations-inner">
+    <div class="locations-left">
+      <span class="section-label" style="color: rgba(255,255,255,0.4); margin-bottom: 8px;">Our Branches</span>
+      <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 32px; color: #fff; line-height: 1.2;">Three locations.<br>One standard of excellence.</h3>
+    </div>
+    <div class="locations-cards">
+      <div class="loc-card">
+        <div class="loc-pin">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+        </div>
+        <div>
+          <h5>Nungwi</h5>
+          <span>North Zanzibar</span>
+          <div class="loc-badge">24 / 7 Open</div>
+        </div>
+      </div>
+      <div class="loc-card">
+        <div class="loc-pin">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+        </div>
+        <div>
+          <h5>Mbweni</h5>
+          <span>Stone Town Area</span>
+        </div>
+      </div>
+      <div class="loc-card">
+        <div class="loc-pin">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+        </div>
+        <div>
+          <h5>Taveta</h5>
+          <span>South Region</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING SECTION -->
+<section id="pricing" style="background: var(--off-white); padding: 60px 32px;">
+  <div style="max-width: 1180px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 54px;">
+      <span style="display: block; margin-bottom: 14px; color: var(--green); font-size: 10px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase;">Simple, transparent pricing</span>
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(42px, 6vw, 70px); line-height: 1.02; margin-bottom: 16px; color: var(--navy);">Choose it. Bag it.<br><em style="color: var(--navy); font-weight: 300;">We'll clean it.</em></h2>
+      <p style="max-width: 570px; margin: auto; color: var(--gray-500); font-size: 15px; font-weight: 300;">Build your laundry order in a few taps. Choose a category, pick an item and service, then send the complete order to us on WhatsApp.</p>
+      <div class="pricing-steps" style="max-width: 1040px; margin: 28px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+        <div style="padding: 13px 16px; background: #fff; border: 1px solid var(--gray-300); border-radius: 10px; font-size: 12px; color: var(--gray-500);"><b style="color: var(--navy); margin-right: 6px;">01</b> Choose a category & item</div>
+        <div style="padding: 13px 16px; background: #fff; border: 1px solid var(--gray-300); border-radius: 10px; font-size: 12px; color: var(--gray-500);"><b style="color: var(--navy); margin-right: 6px;">02</b> Add quantities to your cart</div>
+        <div style="padding: 13px 16px; background: #fff; border: 1px solid var(--gray-300); border-radius: 10px; font-size: 12px; color: var(--gray-500);"><b style="color: var(--navy); margin-right: 6px;">03</b> Send your order on WhatsApp</div>
+      </div>
+    </div>
+
+    <div class="pricing-layout" style="display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(330px, .75fr); gap: 28px; align-items: start;">
+      <section style="background: #fff; border: 1px solid var(--gray-300); border-radius: 16px; box-shadow: 0 12px 40px rgba(10, 31, 68, .05); overflow: hidden;" aria-labelledby="picker-title">
+        <div style="padding: 24px 26px; border-bottom: 1px solid var(--gray-300);">
+          <div style="font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--green); margin-bottom: 4px;">Price selector</div>
+          <h3 id="picker-title" style="font-family: 'Cormorant Garamond', serif; font-size: 32px; line-height: 1.15; color: var(--navy); font-weight: 300;">What are we cleaning?</h3>
+        </div>
+        <div style="padding: 26px;">
+          <div class="pricing-fields" style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+            <div style="display: flex; flex-direction: column; gap: 7px;">
+              <label style="font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #45413c;">Category</label>
+              <select id="category" style="width: 100%; min-height: 48px; border: 1px solid var(--gray-300); border-radius: 8px; background: #fff; color: var(--text); padding: 11px 13px; outline: 0; transition: .2s; cursor: pointer; appearance: auto; -webkit-appearance: menulist; font-size: 16px;"></select>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 7px;">
+              <label style="font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #45413c;">Item</label>
+              <select id="item" style="width: 100%; min-height: 48px; border: 1px solid var(--gray-300); border-radius: 8px; background: #fff; color: var(--text); padding: 11px 13px; outline: 0; transition: .2s; cursor: pointer; appearance: auto; -webkit-appearance: menulist; font-size: 16px;"></select>
+            </div>
+            <div style="grid-column: 1/-1; display: flex; flex-direction: column; gap: 7px;">
+              <label style="font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #45413c;">Service</label>
+              <div class="service-options" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <button class="service-btn active" id="wash-btn" type="button" data-service="washPress" style="min-height: 64px; border: 1px solid var(--gray-300); border-radius: 9px; background: var(--off-white); color: var(--gray-500); padding: 9px; text-align: left; transition: .2s; cursor: pointer;"><strong style="display: block; color: var(--text); font-size: 13px; margin-bottom: 2px;">Wash & Press</strong><span style="font-size: 12px;" id="wash-price">—</span></button>
+                <button class="service-btn" id="dry-btn" type="button" data-service="dryOnly" style="min-height: 64px; border: 1px solid var(--gray-300); border-radius: 9px; background: var(--off-white); color: var(--gray-500); padding: 9px; text-align: left; transition: .2s; cursor: pointer;"><strong style="display: block; color: var(--text); font-size: 13px; margin-bottom: 2px;">Dry Only</strong><span style="font-size: 12px;" id="dry-price">—</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="qty-add" style="display: grid; grid-template-columns: 150px 1fr; gap: 12px; margin-top: 22px;">
+            <div style="height: 50px; border: 1px solid var(--gray-300); border-radius: 999px; display: grid; grid-template-columns: 44px 1fr 44px; align-items: center; text-align: center;">
+              <button type="button" id="minus" style="height: 44px; border: 0; background: none; color: var(--navy); font-size: 22px; cursor: pointer;">−</button>
+              <span id="quantity" style="font-family: 'Cormorant Garamond', serif; font-size: 25px; color: var(--navy);">1</span>
+              <button type="button" id="plus" style="height: 44px; border: 0; background: none; color: var(--navy); font-size: 22px; cursor: pointer;">+</button>
+            </div>
+            <button class="add-btn" type="button" id="add-btn" style="border: 0; border-radius: 999px; background: var(--navy); color: #fff; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; transition: .2s; cursor: pointer;">Add to cart · <span id="add-price">—</span></button>
+          </div>
+        </div>
+      </section>
+
+      <aside style="background: #fff; border: 1px solid var(--gray-300); border-radius: 16px; box-shadow: 0 12px 40px rgba(10, 31, 68, .05); overflow: hidden; position: sticky; top: 140px;" id="cart-panel" aria-labelledby="cart-title">
+        <div style="padding: 24px 26px; border-bottom: 1px solid var(--gray-300);">
+          <div style="font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--green); margin-bottom: 4px;">Your selection</div>
+          <h3 id="cart-title" style="font-family: 'Cormorant Garamond', serif; font-size: 32px; line-height: 1.15; color: var(--navy); font-weight: 300;">Laundry cart</h3>
+        </div>
+        <div class="cart-list" id="cart-list" style="padding: 0 22px; max-height: 355px; overflow: auto;"></div>
+        <div style="padding: 20px 22px 22px; border-top: 1px solid var(--gray-300); background: var(--off-white);">
+          <div style="display: flex; align-items: end; justify-content: space-between; margin-bottom: 16px;">
+            <span style="font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--gray-500);">Estimated total</span>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 32px; color: var(--navy); line-height: 1;" id="total">0 <small style="font: 500 10px Inter, sans-serif; color: var(--gray-500);">TZS</small></div>
+          </div>
+          <button class="checkout-btn" id="checkout-btn" type="button" disabled style="width: 100%; min-height: 52px; border: 0; border-radius: 999px; background: var(--wa); color: #fff; font-size: 13px; font-weight: 600; display: flex; justify-content: center; align-items: center; gap: 9px; cursor: pointer;"><span aria-hidden="true">●</span> Checkout via WhatsApp</button>
+          <p style="text-align: center; color: var(--gray-500); font-size: 10px; margin-top: 10px;">Your order is also recorded for our staff portal.</p>
+        </div>
+      </aside>
+    </div>
+
+    <div style="max-width: 1180px; margin: 22px auto 0; padding: 17px 20px; border-left: 3px solid var(--navy); background: var(--off-white); font-size: 12px; color: var(--gray-500);">Free pickup and delivery included on all orders. Final pricing is confirmed after inspection. Contact us for hotel, bulk laundry and express service rates.</div>
+  </div>
+</section>
+
+<!-- CHECKOUT DIALOG -->
+<dialog id="checkout-dialog" style="width: min(560px, calc(100% - 28px)); max-height: 90vh; margin: auto; border: 0; border-radius: 18px; padding: 0; box-shadow: 0 28px 80px rgba(10, 31, 68, .26); color: var(--text);">
+  <div style="padding: 24px 26px; border-bottom: 1px solid var(--gray-300); display: flex; align-items: start; justify-content: space-between; gap: 16px;">
+    <div><div style="font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--green); margin-bottom: 4px;">One last step</div><h2 style="font-family: 'Cormorant Garamond', serif; font-size: 30px; color: var(--navy); font-weight: 300;">Where should we collect?</h2></div>
+    <button class="close" type="button" id="close-dialog" aria-label="Close" style="width: 38px; height: 38px; border: 1px solid var(--gray-300); border-radius: 50%; background: #fff; color: var(--gray-500); font-size: 20px; cursor: pointer;">×</button>
+  </div>
+  <form class="checkout-form" id="checkout-form" style="padding: 24px 26px 26px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+    <div style="display: flex; flex-direction: column; gap: 7px;">
+      <label style="font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #45413c;">Your name</label>
+      <input id="customer-name" name="name" autocomplete="name" required placeholder="Full name" style="width: 100%; min-height: 48px; border: 1px solid var(--gray-300); border-radius: 8px; background: #fff; color: var(--text); padding: 11px 13px; outline: 0; transition: .2s; font-size: 16px;">
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 7px;">
+      <label style="font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #45413c;">WhatsApp number</label>
+      <input id="customer-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="e.g. 0712 345 678" style="width: 100%; min-height: 48px; border: 1px solid var(--gray-300); border-radius: 8px; background: #fff; color: var(--text); padding: 11px 13px; outline: 0; transition: .2s; font-size: 16px;">
+    </div>
+    <div style="grid-column: 1/-1; display: flex; flex-direction: column; gap: 7px;">
+      <label style="font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #45413c;">Laundry branch</label>
+      <select id="customer-branch" name="branch" required style="width: 100%; min-height: 48px; border: 1px solid var(--gray-300); border-radius: 8px; background: #fff; color: var(--text); padding: 11px 13px; outline: 0; transition: .2s; cursor: pointer; appearance: auto; -webkit-appearance: menulist; font-size: 16px;"><option value="">Choose the nearest branch…</option></select>
+    </div>
+    <div style="grid-column: 1/-1; display: flex; flex-direction: column; gap: 7px;">
+      <label style="font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #45413c;">Pickup location</label>
+      <input id="pickup-location" name="location" autocomplete="street-address" required placeholder="Hotel, area or full address" style="width: 100%; min-height: 48px; border: 1px solid var(--gray-300); border-radius: 8px; background: #fff; color: var(--text); padding: 11px 13px; outline: 0; transition: .2s;">
+    </div>
+    <div style="grid-column: 1/-1; display: flex; flex-direction: column; gap: 7px;">
+      <label style="font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #45413c;">Pickup notes (optional)</label>
+      <textarea id="customer-notes" name="notes" placeholder="Preferred time, room number, special instructions…" style="width: 100%; min-height: 84px; border: 1px solid var(--gray-300); border-radius: 8px; background: #fff; color: var(--text); padding: 11px 13px; outline: 0; transition: .2s; resize: vertical; font-family: inherit;"></textarea>
+    </div>
+    <div style="grid-column: 1/-1; display: flex; justify-content: space-between; padding: 15px 0; border-top: 1px solid var(--gray-300); font-size: 14px;">
+      <span>Order estimate</span>
+      <strong style="font-size: 20px; color: var(--navy);" id="dialog-total">0 TZS</strong>
+    </div>
+    <div style="grid-column: 1/-1; font-size: 12px; text-align: center; color: var(--green); min-height: 18px;" id="checkout-status" role="status"></div>
+    <button class="send-btn" id="send-btn" type="submit" style="grid-column: 1/-1; min-height: 53px; border: 0; border-radius: 999px; background: var(--wa); color: #fff; font-weight: 600; cursor: pointer;">Save & send order on WhatsApp</button>
+  </form>
+</dialog>
+
+<!-- TRACK SECTION -->
+<section id="track" style="background: var(--off-white); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 100px 40px 60px;">
+  <div style="text-align: center; margin-bottom: 56px; width: 100%;">
+    <span style="font-size: 10px; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: var(--green); margin-bottom: 16px; display: block;">Order Tracking</span>
+    <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(36px, 6vw, 64px); line-height: 1.05; color: var(--black); margin-bottom: 16px;">Track your<br><em style="font-style: italic; color: var(--navy);">laundry.</em></h2>
+    <p style="font-size: 15px; font-weight: 300; color: var(--gray-500); max-width: 400px; margin: 0 auto; line-height: 1.7;">Enter your order number to see real-time status, pickup date, and amount due.</p>
+  </div>
+
+  <div style="background: #fff; border: 0.5px solid var(--gray-300); border-radius: 8px; padding: 48px; width: 100%; max-width: 520px; position: relative; overflow: hidden; margin-bottom: 32px;">
+    <div style="content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(to right, var(--navy), var(--green), var(--navy));"></div>
+    <label class="search-label" style="font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gray-700); margin-bottom: 10px; display: block;">Order Number</label>
+    <div style="display: flex; gap: 12px;">
+      <input type="text" class="search-input" id="order-input" placeholder="e.g. YL-2026-0012" maxlength="20" style="flex: 1; padding: 14px 16px; border: 0.5px solid var(--gray-300); border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 300; color: var(--text); background: var(--off-white); outline: none; transition: all 0.2s; letter-spacing: 0.06em; text-transform: uppercase;">
+      <button class="search-btn" id="search-btn" onclick="trackOrder()" style="padding: 14px 24px; background: var(--navy); color: #fff; border: none; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; white-space: nowrap;">Track</button>
+    </div>
+    <p style="font-size: 12px; font-weight: 300; color: var(--gray-500); margin-top: 12px;">Your order number was sent to you via WhatsApp when your order was created. Example: <code style="font-family: 'Inter', monospace; background: var(--gray-100); padding: 2px 6px; border-radius: 3px; font-size: 11px; letter-spacing: 0.05em;">YL-2026-0001</code></p>
+  </div>
+
+  <div class="result-card" id="result-card" style="background: #fff; border: 0.5px solid var(--gray-300); border-radius: 8px; width: 100%; max-width: 520px; overflow: hidden; display: none;">
+    <div style="padding: 28px 36px 0;">
+      <p style="font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray-500); margin-bottom: 16px;">Order Progress</p>
+      <div style="display: flex; align-items: center; gap: 0;" id="progress-steps"></div>
+    </div>
+    <div style="background: var(--navy); padding: 32px 36px; display: flex; align-items: flex-start; justify-content: space-between; gap: 20px;">
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: #fff; letter-spacing: 0.05em;" id="res-order-id">—</div>
+      <div style="padding: 6px 16px; border-radius: 50px; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; background: rgba(255, 255, 255, 0.12); color: rgba(255, 255, 255, 0.9); white-space: nowrap;" id="res-status-badge">—</div>
+    </div>
+    <div style="padding: 32px 36px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0; border-bottom: 0.5px solid var(--gray-100); gap: 20px;"><span style="font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-500); flex-shrink: 0;">Customer</span><span style="font-size: 15px; font-weight: 300; color: var(--text); text-align: right;" id="res-customer">—</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0; border-bottom: 0.5px solid var(--gray-100); gap: 20px;"><span style="font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-500); flex-shrink: 0;">Date Received</span><span style="font-size: 15px; font-weight: 300; color: var(--text); text-align: right;" id="res-date-received">—</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0; border-bottom: 0.5px solid var(--gray-100); gap: 20px;"><span style="font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-500); flex-shrink: 0;">Expected Pickup</span><span style="font-size: 15px; font-weight: 300; color: var(--text); text-align: right;" id="res-pickup-date">—</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0; border-bottom: 0.5px solid var(--gray-100); gap: 20px;"><span style="font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-500); flex-shrink: 0;">Branch</span><span style="font-size: 15px; font-weight: 300; color: var(--text); text-align: right;" id="res-branch">—</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0; border-bottom: 0.5px solid var(--gray-100); gap: 20px;"><span style="font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-500); flex-shrink: 0;">Service</span><span style="font-size: 15px; font-weight: 300; color: var(--text); text-align: right;" id="res-service">—</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0; border-bottom: 0.5px solid var(--gray-100); gap: 20px;"><span style="font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-500); flex-shrink: 0;">Amount Due</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--navy); text-align: right;" id="res-amount">—</span></div>
+      <div id="res-notes-row" style="display: none; justify-content: space-between; align-items: baseline; padding: 12px 0; gap: 20px;"><span style="font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-500); flex-shrink: 0;">Notes</span><span style="font-size: 15px; font-weight: 300; color: var(--text); text-align: right;" id="res-notes">—</span></div>
+    </div>
+  </div>
+
+  <div class="not-found" id="not-found" style="display: none; width: 100%; max-width: 520px; text-align: center; padding: 40px;">
+    <p style="font-size: 14px; font-weight: 300; color: var(--gray-500); margin-bottom: 20px;">We couldn't find order <strong id="not-found-id"></strong>. Double-check the order number or contact us on WhatsApp for help.</p>
+    <a href="https://wa.me/255713438485" style="display: inline-flex; align-items: center; gap: 8px; background: var(--wa); color: #fff; padding: 12px 24px; border-radius: 50px; font-size: 13px; font-weight: 500; text-decoration: none; transition: all 0.2s; letter-spacing: 0.05em; target: _blank;" target="_blank">
+      <svg style="width: 16px; height: 16px;" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Ask Us on WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="booking-section" id="booking">
+  <div class="booking-wrap">
+    <div class="booking-header reveal">
+      <span class="section-label">Schedule a Pickup</span>
+      <h2 class="section-title">Ready to hand over<br>the laundry?</h2>
+      <p class="section-body" style="margin: 16px auto 0; text-align: center; max-width: 480px;">Fill in your details below. We'll confirm your booking via WhatsApp and be at your door on time — every time.</p>
+    </div>
+
+    <div class="booking-form reveal">
+      <div class="form-section-divider"><span>Personal Details</span></div>
+      <div class="form-row">
+        <div class="form-field">
+          <label>Full Name <span class="req">*</span></label>
+          <input type="text" id="f-name" placeholder="Your full name" required>
+        </div>
+        <div class="form-field">
+          <label>Phone Number <span class="req">*</span></label>
+          <input type="tel" id="f-phone" placeholder="+255 7XX XXX XXX" required>
+        </div>
+      </div>
+      <div class="form-row" style="margin-bottom: 0;">
+        <div class="form-field">
+          <label>Email Address</label>
+          <input type="email" id="f-email" placeholder="your@email.com">
+        </div>
+        <div class="form-field">
+          <label>Preferred Branch <span class="req">*</span></label>
+          <div class="select-wrapper">
+            <select id="f-branch" class="placeholder-active" required onchange="this.classList.remove('placeholder-active')">
+              <option value="" disabled selected>Choose your branch</option>
+              <option value="Nungwi">📍 Nungwi — 24-Hour Service</option>
+              <option value="Mbweni">📍 Mbweni — Stone Town Area</option>
+              <option value="Taveta">📍 Taveta — South Region</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section-divider"><span>Pickup & Delivery</span></div>
+      <div class="form-row">
+        <div class="form-field">
+          <label>Pickup Location <span class="req">*</span></label>
+          <input type="text" id="f-pickup" placeholder="Hotel name, street or landmark" required>
+        </div>
+        <div class="form-field">
+          <label>Delivery Address</label>
+          <input type="text" id="f-delivery" placeholder="Same as pickup? Leave blank">
+        </div>
+      </div>
+
+      <div class="form-section-divider"><span>Service & Timing</span></div>
+      <div class="form-row">
+        <div class="form-field">
+          <label>Service Type <span class="req">*</span></label>
+          <div class="select-wrapper">
+            <select id="f-service" class="placeholder-active" required onchange="this.classList.remove('placeholder-active')">
+              <option value="" disabled selected>Choose a service</option>
+              <option value="Wash &amp; Dry">🫧 Wash &amp; Dry</option>
+              <option value="Dry Cleaning">👔 Dry Cleaning</option>
+              <option value="Ironing &amp; Folding">🧺 Ironing &amp; Folding</option>
+              <option value="Stain Removal">✨ Stain Removal</option>
+              <option value="Hotel / Bulk Laundry">🏨 Hotel / Bulk Laundry</option>
+              <option value="Blankets / Duvets">🛏 Blankets / Duvets</option>
+              <option value="Curtains">🪟 Curtains</option>
+              <option value="Other">💬 Other — I'll explain below</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Pickup Date <span class="req">*</span></label>
+          <input type="date" id="f-date" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label>Preferred Pickup Time <span class="req">*</span></label>
+          <input type="time" id="f-time" required>
+        </div>
+        <div class="form-field"></div>
+      </div>
+      <div class="form-row" style="margin-top: 8px;">
+        <div class="form-field full">
+          <label>Special Notes</label>
+          <textarea id="f-notes" placeholder="Any special instructions, fabric sensitivities, or details we should know..."></textarea>
+        </div>
+      </div>
+
+      <div class="form-submit-area">
+        <button class="btn-submit-wa" onclick="submitToWhatsApp()">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Send Booking Request via WhatsApp
+        </button>
+        <p class="submit-note">Your details will open in WhatsApp — send the message to confirm. Fast response guaranteed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="contact">
+  <div class="final-cta-inner">
+    <span class="section-label" style="color: rgba(255,255,255,0.35);">Ready When You Are</span>
+    <h2>Your freshest clothes<br>are one message <em>away.</em></h2>
+    <p>Contact us on WhatsApp to book a pickup, ask about a service, or discuss hotel linen arrangements. We respond fast — always.</p>
+    <div class="cta-actions">
+      <a href="https://wa.me/255713438485" class="btn-whatsapp-lg" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Message Us on WhatsApp
+      </a>
+      <p class="cta-note">+255 713 438 485 · +255 779 123 120 · Available daily · Fast response</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="foot-brand">RESAYLE Laundry & General Supplies</span>
+  <span class="foot-tag">Professional Laundry &amp; Dry Cleaning Services</span>
+  <nav class="foot-links">
+    <a href="#pricing">Pricing</a>
+    <a href="#track">Track Order</a>
+    <a href="admin/index.html">Staff Portal</a>
+  </nav>
+</footer>
+
+<!-- CONFIG: Load global variables for pricing & tracking -->
+<script src="assets/js/config.js"></script>
+
+<script>
+  /* ── Detect slow connection & disable animations ── */
+  if (navigator.connection?.effectiveType === '3g' || navigator.connection?.effectiveType === '2g' || navigator.connection?.saveData) {
+    document.documentElement.style.setProperty('--animation-duration', '0.01ms');
+  }
+
+  /* ── Scroll reveal ── */
+  const revealEls = document.querySelectorAll('.reveal');
+  if (revealEls.length) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+  }
+
+  /* ── Min date ── */
+  const dateInput = document.getElementById('f-date');
+  if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
+
+  /* ── Mobile nav ── */
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-nav a').forEach(a => a.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileNav.classList.remove('open');
+  }));
+
+  /* ── Section nav highlight ── */
+  const sectionNavLinks = [...document.querySelectorAll('[data-nav-link]')];
+  const sectionTargets = sectionNavLinks
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
+
+  const setActiveSection = id => {
+    sectionNavLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+    });
+  };
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter(entry => entry.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (visible) setActiveSection(visible.target.id);
+  }, { rootMargin: '-38% 0px -48% 0px', threshold: [0.08, 0.2, 0.4] });
+
+  sectionTargets.forEach(section => sectionObserver.observe(section));
+  setActiveSection('home');
+
+  /* ── WhatsApp submit ── */
+  function submitToWhatsApp() {
+    const name     = document.getElementById('f-name').value.trim();
+    const phone    = document.getElementById('f-phone').value.trim();
+    const email    = document.getElementById('f-email').value.trim();
+    const branch   = document.getElementById('f-branch').value;
+    const pickup   = document.getElementById('f-pickup').value.trim();
+    const delivery = document.getElementById('f-delivery').value.trim();
+    const service  = document.getElementById('f-service').value;
+    const date     = document.getElementById('f-date').value;
+    const time     = document.getElementById('f-time').value;
+    const notes    = document.getElementById('f-notes').value.trim();
+
+    const required = [
+      { val: name,    id: 'f-name' },
+      { val: phone,   id: 'f-phone' },
+      { val: branch,  id: 'f-branch' },
+      { val: pickup,  id: 'f-pickup' },
+      { val: service, id: 'f-service' },
+      { val: date,    id: 'f-date' },
+      { val: time,    id: 'f-time' },
+    ];
+
+    let hasError = false;
+    required.forEach(f => {
+      const el = document.getElementById(f.id);
+      if (!f.val && el) {
+        el.style.borderColor = '#E24B4A';
+        el.addEventListener('input',  () => el.style.borderColor = '', { once: true });
+        el.addEventListener('change', () => el.style.borderColor = '', { once: true });
+        hasError = true;
+      }
+    });
+    if (hasError) return;
+
+    const fmtTime = (t) => {
+      if (!t) return '';
+      const [h, m] = t.split(':');
+      const hr = parseInt(h);
+      return (hr > 12 ? hr - 12 : hr || 12) + ':' + m + ' ' + (hr >= 12 ? 'PM' : 'AM');
+    };
+
+    const fmtDate = (d) => {
+      if (!d) return '';
+      return new Date(d + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    };
+
+    let msg = "🧺 *RESAYLE Laundry — Pickup Booking*\n";
+    msg += '━━━━━━━━━━━━━━━━━━━━━━\n\n';
+    msg += '*👤 Name:* ' + name + '\n';
+    msg += '*📞 Phone:* ' + phone + '\n';
+    if (email) msg += '*📧 Email:* ' + email + '\n';
+    msg += '\n';
+    msg += '*📍 Branch:* ' + branch + '\n';
+    msg += '*🏠 Pickup Location:* ' + pickup + '\n';
+    if (delivery) msg += '*🚚 Delivery Address:* ' + delivery + '\n';
+    msg += '\n';
+    msg += '*🫧 Service:* ' + service + '\n';
+    msg += '*📅 Date:* ' + fmtDate(date) + '\n';
+    msg += '*⏰ Time:* ' + fmtTime(time) + '\n';
+    if (notes) msg += '\n*📝 Notes:* ' + notes + '\n';
+    msg += '\n━━━━━━━━━━━━━━━━━━━━━━\n';
+    msg += '_Sent via RESAYLE_';
+
+    window.open('https://wa.me/255713438485?text=' + encodeURIComponent(msg), '_blank');
+  }
+
+  // ════════════════════════════════════════════════════════════════════════════
+  // PRICING SECTION - CART FUNCTIONALITY
+  // ════════════════════════════════════════════════════════════════════════════
+
+  // The embedded pricing and tracking tools must not depend on config.js loading.
+  const APP_CONFIG = window.YASSERS_CONFIG || {};
+  const ADMIN_SCRIPT_URL = APP_CONFIG.APPS_SCRIPT_URL || 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+  const TRACK_SCRIPT_URL = ADMIN_SCRIPT_URL;
+  const WHATSAPP_NUMBER = APP_CONFIG.WHATSAPP_NUMBER || '255713438485';
+  const BRANCHES = Array.isArray(APP_CONFIG.BRANCHES) && APP_CONFIG.BRANCHES.length
+    ? APP_CONFIG.BRANCHES
+    : ['Nungwi — North Zanzibar (24/7)', 'Mbweni — Stone Town Area', 'Taveta — South Region'];
+
+  const FALLBACK_PRICE_LIST = [
+    ['Shirt','Men\'s Clothing',1500,1000],['T-Shirt','Men\'s Clothing',1500,1000],['Jeans Trousers','Men\'s Clothing',2000,1000],['Normal Trousers','Men\'s Clothing',2000,1000],['Short Trousers','Men\'s Clothing',1500,1000],['Pajamas','Men\'s Clothing',2000,1500],['Training Suit','Men\'s Clothing',2500,1500],['Overall','Men\'s Clothing',3000,2000],['Overcoat','Men\'s Clothing',4000,3000],['Bush Shirt','Men\'s Clothing',2000,1500],['Sweater','Men\'s Clothing',2000,1500],['Sports Jacket','Men\'s Clothing',3000,2000],['Blazer','Men\'s Clothing',4000,3000],['2 Piece Full Suit','Men\'s Clothing',6000,5000],['3 Piece Full Suit','Men\'s Clothing',8000,6000],['Kofia','Men\'s Clothing',1000,500],['Seruni','Men\'s Clothing',1500,1000],['Scarf','Men\'s Clothing',1000,800],['Kandura','Men\'s Clothing',2500,2000],['Safari Suit','Men\'s Clothing',3500,2500],['Pants','Men\'s Clothing',1500,1000],['Suit Trousers','Men\'s Clothing',2500,2000],['Socks','Men\'s Clothing',500,null],['Vest','Men\'s Clothing',1000,500],['Punjabi Suit','Men\'s Clothing',3000,2000],['Vest (Kizibao)','Men\'s Clothing',1000,500],['Tie','Men\'s Clothing',1000,800],['Cap','Men\'s Clothing',1000,500],['Underwear','Men\'s Clothing',500,null],['Boxer','Men\'s Clothing',500,null],['Sports Trousers','Men\'s Clothing',1500,1000],
+    ['Plain Blouse','Women\'s Clothing',1500,1000],['Kanga','Women\'s Clothing',1000,500],['Jeans Skirt','Women\'s Clothing',2000,1500],['Plain Dress','Women\'s Clothing',2000,1500],['Night Dress','Women\'s Clothing',2000,1500],['Abaya','Women\'s Clothing',3000,2500],['Burqa','Women\'s Clothing',3000,2500],['Hijab','Women\'s Clothing',1000,800],['Hijab with Stones','Women\'s Clothing',2000,1500],['Punjabi Suit','Women\'s Clothing',3000,2000],['Ladies Suit','Women\'s Clothing',4000,3000],['Slip','Women\'s Clothing',1000,800],['Swimsuit','Women\'s Clothing',1500,1000],['Camisole','Women\'s Clothing',1000,500],['Special Dress','Women\'s Clothing',5000,4000],
+    ['Napkin','Hotel & Hospitality',500,300],['Duvet','Hotel & Hospitality',5000,4000],['Bath Towel Medium','Hotel & Hospitality',2000,1500],['Bath Towel Large','Hotel & Hospitality',2500,2000],['Face Towel','Hotel & Hospitality',500,null],['Hand Towel','Hotel & Hospitality',1000,500],['Bathrobe','Hotel & Hospitality',3000,2500],['Pillow Cover','Hotel & Hospitality',1000,500],['Heavy Pillow Cover','Hotel & Hospitality',1500,1000],['Decorated Pillow Cover','Hotel & Hospitality',2000,1500],['Single Bedsheet','Hotel & Hospitality',2500,2000],['Double Bedsheet','Hotel & Hospitality',3500,3000],['Mosquito Net','Hotel & Hospitality',3000,null],['Single Blanket','Hotel & Hospitality',4000,3000],['Double Blanket','Hotel & Hospitality',6000,5000],['Heavy Curtains','Hotel & Hospitality',5000,4000],['Light Curtains','Hotel & Hospitality',3000,2500],['Pillow','Hotel & Hospitality',3000,2000],
+    ['Door Mat','Household & Specialty',2000,null],['Sofa Seat Cover','Household & Specialty',3000,2500],['Bags','Household & Specialty',2000,1500],['Shoes','Household & Specialty',3000,null]
+  ].map(([item,category,washPress,dryOnly])=>({item,category,washPress,dryOnly}));
+
+  let PRICE_LIST = FALLBACK_PRICE_LIST;
+  let service='washPress', quantity=1, cart=[];
+  let pricingReady=false;
+  const money=n=>Number(n).toLocaleString('en-US');
+  const currentItem=()=>PRICE_LIST.find(x=>x.category===document.getElementById('category').value&&x.item===document.getElementById('item').value);
+
+  function initPricing(){
+    const categoryEl=document.getElementById('category'),itemEl=document.getElementById('item');
+    const washBtn=document.getElementById('wash-btn'),dryBtn=document.getElementById('dry-btn');
+    if(!pricingReady){
+      const branchEl=document.getElementById('customer-branch');
+      if(branchEl.options.length===1)BRANCHES.forEach(branch=>branchEl.add(new Option(branch,branch)));
+      categoryEl.addEventListener('change',()=>populateItems());
+      itemEl.addEventListener('change',updatePicker);
+      [washBtn,dryBtn].forEach(btn=>btn.addEventListener('click',()=>{if(btn.disabled)return;service=btn.dataset.service;updatePicker()}));
+      document.getElementById('minus').onclick=()=>{quantity=Math.max(1,quantity-1);updatePicker()};
+      document.getElementById('plus').onclick=()=>{quantity=Math.min(99,quantity+1);updatePicker()};
+      document.getElementById('add-btn').onclick=addToCart;
+      pricingReady=true;
+    }
+    rebuildPricing();
+    renderCart();
+  }
+
+  function rebuildPricing(preferredCategory=document.getElementById('category').value,preferredItem=document.getElementById('item').value){
+    const categoryEl=document.getElementById('category');
+    const categories=[...new Set(PRICE_LIST.map(x=>x.category))];
+    categoryEl.innerHTML='';
+    categories.forEach(cat=>categoryEl.add(new Option(cat,cat)));
+    if(categories.includes(preferredCategory))categoryEl.value=preferredCategory;
+    populateItems(preferredItem);
+  }
+
+  async function loadPriceList(){
+    // Built-in prices render immediately; Sheets refreshes them in the background.
+    initPricing();
+    if(ADMIN_SCRIPT_URL!=='PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE'){
+      const controller=new AbortController();
+      const timeout=setTimeout(()=>controller.abort(),5000);
+      try{
+        const response=await fetch(`${ADMIN_SCRIPT_URL}?action=getPrices`,{signal:controller.signal});
+        if(!response.ok)throw new Error(`Price request failed: ${response.status}`);
+        const data=await response.json();
+        if(data.prices&&data.prices.length){
+          const selectedCategory=document.getElementById('category').value;
+          const selectedItem=document.getElementById('item').value;
+          const sheetPrices=data.prices.map(row=>({item:row.item,category:row.category,washPress:Number(String(row.washPress).replace(/,/g,'')),dryOnly:row.dryOnly===''||row.dryOnly==null?null:Number(String(row.dryOnly).replace(/,/g,''))})).filter(row=>row.item&&row.category&&row.washPress);
+          if(sheetPrices.length){
+            PRICE_LIST=sheetPrices;
+            rebuildPricing(selectedCategory,selectedItem);
+          }
+        }
+      }catch(error){console.warn('Using built-in price list');}
+      finally{clearTimeout(timeout);}
+    }
+  }
+
+  function populateItems(preferredItem=''){
+    const itemEl=document.getElementById('item');
+    const items=PRICE_LIST.filter(x=>x.category===document.getElementById('category').value);
+    itemEl.innerHTML='';
+    items.forEach(x=>itemEl.add(new Option(x.item,x.item)));
+    if(items.some(x=>x.item===preferredItem))itemEl.value=preferredItem;
+    service='washPress';updatePicker();
+  }
+
+  function updatePicker(){
+    const item=currentItem();
+    if(!item)return;
+    if(service==='dryOnly'&&!item.dryOnly)service='washPress';
+    document.getElementById('wash-btn').classList.toggle('active',service==='washPress');
+    document.getElementById('dry-btn').classList.toggle('active',service==='dryOnly');
+    document.getElementById('dry-btn').disabled=!item.dryOnly;
+    document.getElementById('wash-price').textContent=`${money(item.washPress)} TZS / item`;
+    document.getElementById('dry-price').textContent=item.dryOnly?`${money(item.dryOnly)} TZS / item`:'Not available';
+    document.getElementById('quantity').textContent=quantity;
+    document.getElementById('add-price').textContent=`${money(item[service]*quantity)} TZS`;
+  }
+
+  function addToCart(){
+    const item=currentItem(),key=`${item.category}|${item.item}|${service}`,existing=cart.find(x=>x.key===key);
+    if(existing)existing.qty+=quantity;else cart.push({key,item:item.item,category:item.category,service,unitPrice:item[service],qty:quantity});
+    quantity=1;updatePicker();renderCart();document.getElementById('cart-panel').scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+
+  function changeCart(key,delta){const row=cart.find(x=>x.key===key);if(!row)return;row.qty+=delta;if(row.qty<=0)cart=cart.filter(x=>x.key!==key);renderCart()}
+
+  function cartTotal(){return cart.reduce((sum,x)=>sum+x.unitPrice*x.qty,0)}
+
+  function renderCart(){
+    const list=document.getElementById('cart-list'),count=cart.reduce((sum,x)=>sum+x.qty,0);
+    document.getElementById('total').innerHTML=`${money(cartTotal())} <small style="font: 500 10px Inter, sans-serif; color: var(--gray-500);">TZS</small>`;
+    document.getElementById('checkout-btn').disabled=!cart.length;
+    if(!cart.length){
+      list.innerHTML='<div style="padding: 42px 12px; text-align: center; color: var(--gray-500); font-size: 13px;"><span style="display: block; font-size: 28px; margin-bottom: 8px; opacity: .6;">♧</span>Your cart is waiting for its first item.</div>';
+      return;
+    }
+    list.innerHTML=cart.map(x=>`<div style="padding: 17px 0; border-bottom: 1px solid var(--gray-100); display: grid; grid-template-columns: 1fr auto; gap: 12px;"><div><div style="font-size: 14px; font-weight: 500; margin-bottom: 3px;">${x.qty}× ${x.item}</div><div style="font-size: 11px; color: var(--gray-500);">${x.service==='washPress'?'Wash & Press':'Dry Only'} · ${money(x.unitPrice)} TZS each</div></div><div><div style="text-align: right; color: var(--navy); font-family: 'Cormorant Garamond', serif; font-size: 19px; white-space: nowrap;">${money(x.unitPrice*x.qty)} TZS</div><div style="display: flex; justify-content: flex-end; align-items: center; gap: 5px; margin-top: 7px;"><button type="button" aria-label="Decrease" onclick="changeCart('${x.key.replace(/'/g,"\\'")}',-1)" style="width: 27px; height: 27px; border: 1px solid var(--gray-300); border-radius: 50%; background: #fff; color: var(--navy); cursor: pointer;">−</button><button type="button" aria-label="Increase" onclick="changeCart('${x.key.replace(/'/g,"\\'")}',1)" style="width: 27px; height: 27px; border: 1px solid var(--gray-300); border-radius: 50%; background: #fff; color: var(--navy); cursor: pointer;">+</button><button class="remove" type="button" onclick="changeCart('${x.key.replace(/'/g,"\\'")}',-${x.qty})" style="border: 0; width: auto; margin-left: 4px; color: #b83a35; font: 500 10px Inter, sans-serif; text-transform: uppercase; letter-spacing: .06em; cursor: pointer;">Remove</button></div></div></div>`).join('');
+  }
+
+  const dialog=document.getElementById('checkout-dialog');
+  document.getElementById('checkout-btn').onclick=()=>{document.getElementById('dialog-total').textContent=`${money(cartTotal())} TZS`;dialog.showModal()};
+  document.getElementById('close-dialog').onclick=()=>dialog.close();
+  dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
+  document.getElementById('checkout-form').addEventListener('submit',submitOrder);
+
+  async function submitOrder(e){
+    e.preventDefault();
+    if(!cart.length)return;
+    const sendBtn=document.getElementById('send-btn'),status=document.getElementById('checkout-status');
+    sendBtn.disabled=true;sendBtn.textContent='Saving your order…';status.textContent='';
+    const now=new Date(),orderId=`YL-${now.getFullYear()}-${String(Date.now()).slice(-6)}`;
+    const items=cart.map(x=>({item:x.item,category:x.category,qty:x.qty,service:x.service==='washPress'?'Wash & Press':'Dry Only',unitPrice:x.unitPrice,subtotal:x.qty*x.unitPrice}));
+    const order={orderId,customerName:document.getElementById('customer-name').value.trim(),phone:document.getElementById('customer-phone').value.trim(),branch:document.getElementById('customer-branch').value,pickupLocation:document.getElementById('pickup-location').value.trim(),notes:document.getElementById('customer-notes').value.trim(),dateReceived:now.toISOString().split('T')[0],createdAt:now.toISOString(),items,total:cartTotal(),status:'Received',source:'Website Checkout',serviceType:'Mixed laundry'};
+    try{const saved=JSON.parse(localStorage.getItem('yassersCustomerOrders')||'[]');saved.unshift(order);localStorage.setItem('yassersCustomerOrders',JSON.stringify(saved.slice(0,100)))}catch(err){}
+    if(ADMIN_SCRIPT_URL!=='PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE'){try{await fetch(ADMIN_SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'newOrder',...order})})}catch(err){}}
+    const lines=items.map(x=>`• ${x.qty}x ${x.item} — ${x.service} (${money(x.subtotal)} TZS)`).join('\n');
+    const message=`Hello RESAYLE Laundry, I would like to place an order.\n\nOrder: ${orderId}\nName: ${order.customerName}\nPhone: ${order.phone}\nBranch: ${order.branch}\nPickup: ${order.pickupLocation}\n\n${lines}\n\nEstimated total: ${money(order.total)} TZS${order.notes?`\nNotes: ${order.notes}`:''}\n\nPlease confirm my pickup. Thank you.`;
+    status.textContent=`Order ${orderId} saved. Opening WhatsApp…`;sendBtn.textContent='Opening WhatsApp…';
+    setTimeout(()=>{window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,'_blank','noopener');cart=[];renderCart();dialog.close();e.target.reset();sendBtn.disabled=false;sendBtn.textContent='Save & send order on WhatsApp'},450);
+  }
+
+  // ════════════════════════════════════════════════════════════════════════════
+  // TRACK SECTION - ORDER TRACKING FUNCTIONALITY
+  // ════════════════════════════════════════════════════════════════════════════
+
+  const STATUSES = ["Received", "Washing", "Dry Cleaning", "Pressing", "Ready For Pickup", "Delivered"];
+  const STATUS_INDEX = {
+    "received": 0, "washing": 1, "dry cleaning": 2,
+    "pressing": 3, "ready for pickup": 4, "delivered": 5
+  };
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const order = params.get('order');
+    if (order) {
+      document.getElementById('order-input').value = order;
+      trackOrder();
+    }
+    document.getElementById('order-input').addEventListener('keydown', e => {
+      if (e.key === 'Enter') trackOrder();
+    });
+  });
+
+  function renderProgress(statusStr) {
+    const container = document.getElementById('progress-steps');
+    const currentIdx = STATUS_INDEX[statusStr.toLowerCase()] ?? 0;
+    container.innerHTML = '';
+    STATUSES.forEach((s, i) => {
+      const step = document.createElement('div');
+      step.style.cssText = 'display: flex; flex-direction: column; align-items: center; flex: 1;';
+      const dot = document.createElement('div');
+      dot.style.cssText = `width: 10px; height: 10px; border-radius: 50%; background: var(--gray-300); transition: background 0.3s; position: relative; z-index: 1;`;
+      if (i < currentIdx) dot.style.background = 'var(--green)';
+      else if (i === currentIdx) {
+        dot.style.background = 'var(--navy)';
+        dot.style.boxShadow = '0 0 0 3px rgba(10,31,68,0.15)';
+      }
+      const name = document.createElement('div');
+      name.style.cssText = `font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-500); margin-top: 8px; text-align: center;`;
+      if (i === currentIdx) {
+        name.style.color = 'var(--navy)';
+        name.style.fontWeight = '500';
+      }
+      name.textContent = s;
+      step.appendChild(dot);
+      step.appendChild(name);
+      container.appendChild(step);
+      if (i < STATUSES.length - 1) {
+        const line = document.createElement('div');
+        line.style.cssText = 'flex: 1; height: 1px; background: var(--gray-300); margin: 0 -2px;';
+        if (i < currentIdx) line.style.background = 'var(--green)';
+        container.appendChild(line);
+      }
+    });
+  }
+
+  function statusBadgeClass(s) {
+    const sl = s.toLowerCase();
+    if (sl.includes('ready')) return 'status-ready';
+    if (sl.includes('deliver')) return 'status-delivered';
+    if (sl.includes('wash')) return 'status-washing';
+    if (sl.includes('press')) return 'status-pressing';
+    return 'status-received';
+  }
+
+  async function trackOrder() {
+    const input = document.getElementById('order-input');
+    const orderId = input.value.trim().toUpperCase();
+    if (!orderId) return;
+
+    const btn = document.getElementById('search-btn');
+    const resultCard = document.getElementById('result-card');
+    const notFound = document.getElementById('not-found');
+
+    resultCard.style.display = 'none';
+    notFound.style.display = 'none';
+    btn.disabled = true;
+    btn.textContent = '…';
+
+    try {
+      let order = null;
+
+      if (TRACK_SCRIPT_URL !== "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE") {
+        const res = await fetch(`${TRACK_SCRIPT_URL}?action=trackOrder&orderId=${encodeURIComponent(orderId)}`);
+        const data = await res.json();
+        if (data.found) order = data.order;
+      }
+
+      if (!order) {
+        try {
+          const localOrders = JSON.parse(localStorage.getItem('yassersCustomerOrders') || '[]');
+          order = localOrders.find(row => String(row.orderId).toUpperCase() === orderId) || null;
+        } catch (error) { }
+      }
+
+      if (order) {
+        document.getElementById('res-order-id').textContent = order.orderId || orderId;
+        document.getElementById('res-customer').textContent = order.customerName || '—';
+        document.getElementById('res-date-received').textContent = order.dateReceived || '—';
+        document.getElementById('res-pickup-date').textContent = order.pickupDate || '—';
+        document.getElementById('res-branch').textContent = order.branch || '—';
+        document.getElementById('res-service').textContent = order.serviceType || '—';
+
+        const amt = order.amountDue || order.total;
+        document.getElementById('res-amount').textContent = amt ? parseInt(amt).toLocaleString() + ' TZS' : 'Pending';
+
+        const status = order.status || 'Received';
+        const badge = document.getElementById('res-status-badge');
+        badge.textContent = status;
+        badge.className = 'result-status-badge ' + statusBadgeClass(status);
+
+        if (order.notes) {
+          document.getElementById('res-notes').textContent = order.notes;
+          document.getElementById('res-notes-row').style.display = 'flex';
+        }
+
+        renderProgress(status);
+        resultCard.style.display = 'block';
+      } else {
+        document.getElementById('not-found-id').textContent = orderId;
+        notFound.style.display = 'block';
+      }
+    } catch (e) {
+      document.getElementById('not-found-id').textContent = orderId;
+      notFound.style.display = 'block';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Track';
+    }
+  }
+
+  // Load pricing on page load
+  loadPriceList();
+</script>
+</body>
+</html>

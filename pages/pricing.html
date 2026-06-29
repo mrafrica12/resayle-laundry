@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing &amp; Order — RESAYLE Laundry & General Supplies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--navy:#0a1f44;--navy-2:#122b5c;--green:#1a6b4a;--wa:#25d366;--ink:#171714;--muted:#77736c;--line:#dedbd4;--soft:#f2f0ec;--paper:#fafaf8;--white:#fff;--danger:#b83a35}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,sans-serif;background:var(--paper);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+  button,input,select,textarea{font:inherit}
+  button{cursor:pointer}
+  nav{position:sticky;top:0;z-index:50;height:68px;padding:0 40px;display:flex;align-items:center;justify-content:space-between;background:rgba(250,250,248,.94);backdrop-filter:blur(18px);border-bottom:1px solid rgba(10,31,68,.08)}
+  .logo img{height:50px;width:auto;display:block;mix-blend-mode:multiply}
+  .nav-links{display:flex;align-items:center;gap:20px}
+  .back{font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:#3a3835}
+  .cart-jump{border:0;border-radius:999px;background:var(--navy);color:#fff;padding:10px 16px;font-size:12px;font-weight:600;display:flex;align-items:center;gap:8px}
+  .cart-count{display:grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border-radius:99px;background:#fff;color:var(--navy)}
+  .hero{padding:76px 24px 46px;text-align:center;border-bottom:1px solid var(--line)}
+  .eyebrow{display:block;margin-bottom:14px;color:var(--green);font-size:10px;font-weight:600;letter-spacing:.28em;text-transform:uppercase}
+  h1,h2{font-family:"Cormorant Garamond",serif;font-weight:300}
+  h1{font-size:clamp(42px,6vw,70px);line-height:1.02;margin-bottom:16px}
+  h1 em{color:var(--navy);font-weight:300}
+  .hero p{max-width:570px;margin:auto;color:var(--muted);font-size:15px;font-weight:300}
+  .steps{max-width:1040px;margin:28px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .step{padding:13px 16px;background:#fff;border:1px solid var(--line);border-radius:10px;font-size:12px;color:var(--muted)}
+  .step b{color:var(--navy);margin-right:6px}
+  main{max-width:1180px;margin:0 auto;padding:54px 32px 90px}
+  .order-layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(330px,.75fr);gap:28px;align-items:start}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 12px 40px rgba(10,31,68,.05);overflow:hidden}
+  .panel-head{padding:24px 26px;border-bottom:1px solid var(--line)}
+  .panel-kicker{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:4px}
+  .panel h2{font-size:32px;line-height:1.15;color:var(--navy)}
+  .picker-body{padding:26px}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .field{display:flex;flex-direction:column;gap:7px}
+  .field.full{grid-column:1/-1}
+  label{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#45413c}
+  select,input,textarea{width:100%;min-height:48px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);padding:11px 13px;outline:0;transition:.2s}
+  select:focus,input:focus,textarea:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(10,31,68,.07)}
+  textarea{resize:vertical;min-height:84px}
+  .service-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .service-btn{min-height:64px;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--muted);padding:9px;text-align:left;transition:.2s}
+  .service-btn strong{display:block;color:var(--ink);font-size:13px;margin-bottom:2px}
+  .service-btn span{font-size:12px}
+  .service-btn.active{background:var(--navy);border-color:var(--navy);color:rgba(255,255,255,.7)}
+  .service-btn.active strong{color:#fff}
+  .service-btn:disabled{opacity:.38;cursor:not-allowed}
+  .qty-add{display:grid;grid-template-columns:150px 1fr;gap:12px;margin-top:22px}
+  .qty-control{height:50px;border:1px solid var(--line);border-radius:999px;display:grid;grid-template-columns:44px 1fr 44px;align-items:center;text-align:center}
+  .qty-control button{height:44px;border:0;background:none;color:var(--navy);font-size:22px}
+  #quantity{font-family:"Cormorant Garamond",serif;font-size:25px;color:var(--navy)}
+  .add-btn{border:0;border-radius:999px;background:var(--navy);color:#fff;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:.2s}
+  .add-btn:hover{background:var(--navy-2);transform:translateY(-1px)}
+  .cart-panel{position:sticky;top:88px}
+  .cart-list{padding:0 22px;max-height:355px;overflow:auto}
+  .empty{padding:42px 12px;text-align:center;color:var(--muted);font-size:13px}
+  .empty-icon{display:block;font-size:28px;margin-bottom:8px;opacity:.6}
+  .cart-item{padding:17px 0;border-bottom:1px solid var(--soft);display:grid;grid-template-columns:1fr auto;gap:12px}
+  .cart-name{font-size:14px;font-weight:500;margin-bottom:3px}
+  .cart-meta{font-size:11px;color:var(--muted)}
+  .cart-price{text-align:right;color:var(--navy);font-family:"Cormorant Garamond",serif;font-size:19px;white-space:nowrap}
+  .cart-actions{display:flex;justify-content:flex-end;align-items:center;gap:5px;margin-top:7px}
+  .cart-actions button{width:27px;height:27px;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--navy)}
+  .cart-actions .remove{border:0;width:auto;margin-left:4px;color:var(--danger);font:500 10px Inter,sans-serif;text-transform:uppercase;letter-spacing:.06em}
+  .cart-footer{padding:20px 22px 22px;border-top:1px solid var(--line);background:var(--paper)}
+  .total-row{display:flex;align-items:end;justify-content:space-between;margin-bottom:16px}
+  .total-row span:first-child{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .total{font-family:"Cormorant Garamond",serif;font-size:32px;color:var(--navy);line-height:1}
+  .total small{font:500 10px Inter,sans-serif;color:var(--muted)}
+  .checkout-btn{width:100%;min-height:52px;border:0;border-radius:999px;background:var(--wa);color:#fff;font-size:13px;font-weight:600;display:flex;justify-content:center;align-items:center;gap:9px}
+  .checkout-btn:disabled{background:#b9b8b3;cursor:not-allowed}
+  .checkout-note{text-align:center;color:var(--muted);font-size:10px;margin-top:10px}
+  dialog{width:min(560px,calc(100% - 28px));max-height:90vh;margin:auto;border:0;border-radius:18px;padding:0;box-shadow:0 28px 80px rgba(10,31,68,.26);color:var(--ink)}
+  dialog::backdrop{background:rgba(10,31,68,.55);backdrop-filter:blur(4px)}
+  .checkout-head{padding:24px 26px;border-bottom:1px solid var(--line);display:flex;align-items:start;justify-content:space-between;gap:16px}
+  .checkout-head h2{font-size:30px;color:var(--navy)}
+  .close{width:38px;height:38px;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--muted);font-size:20px}
+  .checkout-form{padding:24px 26px 26px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .modal-total{grid-column:1/-1;display:flex;justify-content:space-between;padding:15px 0;border-top:1px solid var(--line);font-size:14px}
+  .modal-total strong{font-size:20px;color:var(--navy)}
+  .send-btn{grid-column:1/-1;min-height:53px;border:0;border-radius:999px;background:var(--wa);color:#fff;font-weight:600}
+  .send-btn:disabled{opacity:.65}
+  .status{grid-column:1/-1;font-size:12px;text-align:center;color:var(--green);min-height:18px}
+  .note{max-width:1180px;margin:22px auto 0;padding:17px 20px;border-left:3px solid var(--navy);background:var(--soft);font-size:12px;color:var(--muted)}
+  footer{background:var(--navy);color:rgba(255,255,255,.45);padding:30px 40px;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+  footer a{color:inherit;text-decoration:none}
+  @media(max-width:850px){.order-layout{grid-template-columns:1fr}.cart-panel{position:static}.steps{grid-template-columns:1fr}.hero{padding-top:52px}.cart-list{max-height:none}}
+  @media(max-width:600px){nav{height:62px;padding:0 16px}.logo img{height:44px}.back{display:none}.hero{padding:42px 20px 35px}.hero p{font-size:14px}main{padding:32px 14px 65px}.panel-head,.picker-body{padding:20px}.form-grid,.checkout-form{grid-template-columns:1fr}.field.full,.modal-total,.send-btn,.status{grid-column:1}.qty-add{grid-template-columns:124px 1fr}.service-options{grid-template-columns:1fr}.service-btn{min-height:58px}.checkout-head,.checkout-form{padding:20px}footer{padding:26px 20px;display:block;text-align:center}footer a{display:block;margin-top:10px}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="../index.html" aria-label="RESAYLE Laundry home"><img src="../assets/logo/logo.webp" alt="RESAYLE Laundry" decoding="async"></a>
+  <div class="nav-links"><a class="back" href="../index.html">← Back to home</a><button class="cart-jump" onclick="document.getElementById('cart-panel').scrollIntoView({behavior:'smooth'})">Your cart <span class="cart-count" id="nav-count">0</span></button></div>
+</nav>
+
+<header class="hero">
+  <span class="eyebrow">Simple, transparent pricing</span>
+  <h1>Choose it. Bag it.<br><em>We’ll clean it.</em></h1>
+  <p>Build your laundry order in a few taps. Choose a category, pick an item and service, then send the complete order to us on WhatsApp.</p>
+  <div class="steps"><div class="step"><b>01</b> Choose a category &amp; item</div><div class="step"><b>02</b> Add quantities to your cart</div><div class="step"><b>03</b> Send your order on WhatsApp</div></div>
+</header>
+
+<main>
+  <div class="order-layout">
+    <section class="panel" aria-labelledby="picker-title">
+      <div class="panel-head"><div class="panel-kicker">Price selector</div><h2 id="picker-title">What are we cleaning?</h2></div>
+      <div class="picker-body">
+        <div class="form-grid">
+          <div class="field"><label for="category">Category</label><select id="category"></select></div>
+          <div class="field"><label for="item">Item</label><select id="item"></select></div>
+          <div class="field full"><label>Service</label><div class="service-options"><button class="service-btn active" id="wash-btn" type="button" data-service="washPress"><strong>Wash &amp; Press</strong><span id="wash-price">—</span></button><button class="service-btn" id="dry-btn" type="button" data-service="dryOnly"><strong>Dry Only</strong><span id="dry-price">—</span></button></div></div>
+        </div>
+        <div class="qty-add"><div class="qty-control" aria-label="Quantity"><button type="button" id="minus" aria-label="Decrease quantity">−</button><span id="quantity">1</span><button type="button" id="plus" aria-label="Increase quantity">+</button></div><button class="add-btn" type="button" id="add-btn">Add to cart · <span id="add-price">—</span></button></div>
+      </div>
+    </section>
+
+    <aside class="panel cart-panel" id="cart-panel" aria-labelledby="cart-title">
+      <div class="panel-head"><div class="panel-kicker">Your selection</div><h2 id="cart-title">Laundry cart</h2></div>
+      <div class="cart-list" id="cart-list"></div>
+      <div class="cart-footer"><div class="total-row"><span>Estimated total</span><div class="total" id="total">0 <small>TZS</small></div></div><button class="checkout-btn" id="checkout-btn" type="button" disabled><span aria-hidden="true">●</span> Checkout via WhatsApp</button><p class="checkout-note">Your order is also recorded for our staff portal.</p></div>
+    </aside>
+  </div>
+  <div class="note">Free pickup and delivery included on all orders. Final pricing is confirmed after inspection. Contact us for hotel, bulk laundry and express service rates.</div>
+</main>
+
+<dialog id="checkout-dialog">
+  <div class="checkout-head"><div><div class="panel-kicker">One last step</div><h2>Where should we collect?</h2></div><button class="close" type="button" id="close-dialog" aria-label="Close">×</button></div>
+  <form class="checkout-form" id="checkout-form">
+    <div class="field"><label for="customer-name">Your name</label><input id="customer-name" name="name" autocomplete="name" required placeholder="Full name"></div>
+    <div class="field"><label for="customer-phone">WhatsApp number</label><input id="customer-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="e.g. 0712 345 678"></div>
+    <div class="field full"><label for="customer-branch">Laundry branch</label><select id="customer-branch" name="branch" required><option value="">Choose the nearest branch…</option></select></div>
+    <div class="field full"><label for="pickup-location">Pickup location</label><input id="pickup-location" name="location" autocomplete="street-address" required placeholder="Hotel, area or full address"></div>
+    <div class="field full"><label for="customer-notes">Pickup notes (optional)</label><textarea id="customer-notes" name="notes" placeholder="Preferred time, room number, special instructions…"></textarea></div>
+    <div class="modal-total"><span>Order estimate</span><strong id="dialog-total">0 TZS</strong></div>
+    <div class="status" id="checkout-status" role="status"></div>
+    <button class="send-btn" id="send-btn" type="submit">Save &amp; send order on WhatsApp</button>
+  </form>
+</dialog>
+
+<footer><span>© 2026 RESAYLE Laundry &amp; General Supplies</span><a href="../index.html">Zanzibar · Free pickup &amp; delivery</a></footer>
+
+<script src="../assets/js/config.js"></script>
+<script>
+// Keep the selector usable even if config.js is missing, stale or temporarily unavailable.
+const SITE_CONFIG = window.YASSERS_CONFIG || {};
+const ADMIN_SCRIPT_URL = SITE_CONFIG.APPS_SCRIPT_URL || 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+const WHATSAPP_NUMBER = SITE_CONFIG.WHATSAPP_NUMBER || '255713438485';
+const BRANCHES = Array.isArray(SITE_CONFIG.BRANCHES) && SITE_CONFIG.BRANCHES.length
+  ? SITE_CONFIG.BRANCHES
+  : ['Nungwi — North Zanzibar (24/7)', 'Mbweni — Stone Town Area', 'Taveta — South Region'];
+const FALLBACK_PRICE_LIST = [
+  ['Shirt','Men’s Clothing',1500,1000],['T-Shirt','Men’s Clothing',1500,1000],['Jeans Trousers','Men’s Clothing',2000,1000],['Normal Trousers','Men’s Clothing',2000,1000],['Short Trousers','Men’s Clothing',1500,1000],['Pajamas','Men’s Clothing',2000,1500],['Training Suit','Men’s Clothing',2500,1500],['Overall','Men’s Clothing',3000,2000],['Overcoat','Men’s Clothing',4000,3000],['Bush Shirt','Men’s Clothing',2000,1500],['Sweater','Men’s Clothing',2000,1500],['Sports Jacket','Men’s Clothing',3000,2000],['Blazer','Men’s Clothing',4000,3000],['2 Piece Full Suit','Men’s Clothing',6000,5000],['3 Piece Full Suit','Men’s Clothing',8000,6000],['Kofia','Men’s Clothing',1000,500],['Seruni','Men’s Clothing',1500,1000],['Scarf','Men’s Clothing',1000,800],['Kandura','Men’s Clothing',2500,2000],['Safari Suit','Men’s Clothing',3500,2500],['Pants','Men’s Clothing',1500,1000],['Suit Trousers','Men’s Clothing',2500,2000],['Socks','Men’s Clothing',500,null],['Vest','Men’s Clothing',1000,500],['Punjabi Suit','Men’s Clothing',3000,2000],['Vest (Kizibao)','Men’s Clothing',1000,500],['Tie','Men’s Clothing',1000,800],['Cap','Men’s Clothing',1000,500],['Underwear','Men’s Clothing',500,null],['Boxer','Men’s Clothing',500,null],['Sports Trousers','Men’s Clothing',1500,1000],
+  ['Plain Blouse','Women’s Clothing',1500,1000],['Kanga','Women’s Clothing',1000,500],['Jeans Skirt','Women’s Clothing',2000,1500],['Plain Dress','Women’s Clothing',2000,1500],['Night Dress','Women’s Clothing',2000,1500],['Abaya','Women’s Clothing',3000,2500],['Burqa','Women’s Clothing',3000,2500],['Hijab','Women’s Clothing',1000,800],['Hijab with Stones','Women’s Clothing',2000,1500],['Punjabi Suit','Women’s Clothing',3000,2000],['Ladies Suit','Women’s Clothing',4000,3000],['Slip','Women’s Clothing',1000,800],['Swimsuit','Women’s Clothing',1500,1000],['Camisole','Women’s Clothing',1000,500],['Special Dress','Women’s Clothing',5000,4000],
+  ['Napkin','Hotel & Hospitality',500,300],['Duvet','Hotel & Hospitality',5000,4000],['Bath Towel Medium','Hotel & Hospitality',2000,1500],['Bath Towel Large','Hotel & Hospitality',2500,2000],['Face Towel','Hotel & Hospitality',500,null],['Hand Towel','Hotel & Hospitality',1000,500],['Bathrobe','Hotel & Hospitality',3000,2500],['Pillow Cover','Hotel & Hospitality',1000,500],['Heavy Pillow Cover','Hotel & Hospitality',1500,1000],['Decorated Pillow Cover','Hotel & Hospitality',2000,1500],['Single Bedsheet','Hotel & Hospitality',2500,2000],['Double Bedsheet','Hotel & Hospitality',3500,3000],['Mosquito Net','Hotel & Hospitality',3000,null],['Single Blanket','Hotel & Hospitality',4000,3000],['Double Blanket','Hotel & Hospitality',6000,5000],['Heavy Curtains','Hotel & Hospitality',5000,4000],['Light Curtains','Hotel & Hospitality',3000,2500],['Pillow','Hotel & Hospitality',3000,2000],
+  ['Door Mat','Household & Specialty',2000,null],['Sofa Seat Cover','Household & Specialty',3000,2500],['Bags','Household & Specialty',2000,1500],['Shoes','Household & Specialty',3000,null]
+].map(([item,category,washPress,dryOnly])=>({item,category,washPress,dryOnly}));
+let PRICE_LIST = FALLBACK_PRICE_LIST;
+
+const categoryEl=document.getElementById('category'),itemEl=document.getElementById('item');
+const washBtn=document.getElementById('wash-btn'),dryBtn=document.getElementById('dry-btn');
+let service='washPress',quantity=1,cart=[];
+let pickerReady=false;
+const money=n=>Number(n).toLocaleString('en-US');
+const currentItem=()=>PRICE_LIST.find(x=>x.category===categoryEl.value&&x.item===itemEl.value);
+BRANCHES.forEach(branch=>document.getElementById('customer-branch').add(new Option(branch,branch)));
+
+function initPicker(){
+  if(!pickerReady){
+    categoryEl.addEventListener('change',()=>populateItems());
+    itemEl.addEventListener('change',updatePicker);
+    [washBtn,dryBtn].forEach(btn=>btn.addEventListener('click',()=>{if(btn.disabled)return;service=btn.dataset.service;updatePicker()}));
+    document.getElementById('minus').onclick=()=>{quantity=Math.max(1,quantity-1);updatePicker()};
+    document.getElementById('plus').onclick=()=>{quantity=Math.min(99,quantity+1);updatePicker()};
+    document.getElementById('add-btn').onclick=addToCart;
+    pickerReady=true;
+  }
+  rebuildPicker();
+  renderCart();
+}
+
+function rebuildPicker(preferredCategory=categoryEl.value,preferredItem=itemEl.value){
+  const categories=[...new Set(PRICE_LIST.map(x=>x.category))];
+  categoryEl.innerHTML='';
+  categories.forEach(cat=>categoryEl.add(new Option(cat,cat)));
+  if(categories.includes(preferredCategory))categoryEl.value=preferredCategory;
+  populateItems(preferredItem);
+}
+
+async function loadPriceList(){
+  // Render the built-in catalogue first; never make the customer wait for Sheets.
+  initPicker();
+  if(ADMIN_SCRIPT_URL!=='PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE'){
+    const controller=new AbortController();
+    const timeout=setTimeout(()=>controller.abort(),5000);
+    try{
+      const response=await fetch(`${ADMIN_SCRIPT_URL}?action=getPrices`,{signal:controller.signal});
+      if(!response.ok)throw new Error(`Price request failed: ${response.status}`);
+      const data=await response.json();
+      if(data.prices&&data.prices.length){
+        const selectedCategory=categoryEl.value,selectedItem=itemEl.value;
+        const sheetPrices=data.prices.map(row=>({
+          item:row.item,
+          category:row.category,
+          washPress:Number(String(row.washPress).replace(/,/g,'')),
+          dryOnly:row.dryOnly===''||row.dryOnly==null?null:Number(String(row.dryOnly).replace(/,/g,''))
+        })).filter(row=>row.item&&row.category&&row.washPress);
+        if(sheetPrices.length){
+          PRICE_LIST=sheetPrices;
+          rebuildPicker(selectedCategory,selectedItem);
+        }
+      }
+    }catch(error){console.warn('Using the built-in price list while Google Sheets is unavailable.');}
+    finally{clearTimeout(timeout);}
+  }
+}
+function populateItems(preferredItem=''){
+  const items=PRICE_LIST.filter(x=>x.category===categoryEl.value);
+  itemEl.innerHTML='';
+  items.forEach(x=>itemEl.add(new Option(x.item,x.item)));
+  if(items.some(x=>x.item===preferredItem))itemEl.value=preferredItem;
+  service='washPress';updatePicker();
+}
+function updatePicker(){
+  const item=currentItem(); if(!item)return;
+  if(service==='dryOnly'&&!item.dryOnly)service='washPress';
+  washBtn.classList.toggle('active',service==='washPress');dryBtn.classList.toggle('active',service==='dryOnly');dryBtn.disabled=!item.dryOnly;
+  document.getElementById('wash-price').textContent=`${money(item.washPress)} TZS / item`;
+  document.getElementById('dry-price').textContent=item.dryOnly?`${money(item.dryOnly)} TZS / item`:'Not available';
+  document.getElementById('quantity').textContent=quantity;
+  document.getElementById('add-price').textContent=`${money(item[service]*quantity)} TZS`;
+}
+function addToCart(){
+  const item=currentItem(),key=`${item.category}|${item.item}|${service}`,existing=cart.find(x=>x.key===key);
+  if(existing)existing.qty+=quantity;else cart.push({key,item:item.item,category:item.category,service,unitPrice:item[service],qty:quantity});
+  quantity=1;updatePicker();renderCart();document.getElementById('cart-panel').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function changeCart(key,delta){const row=cart.find(x=>x.key===key);if(!row)return;row.qty+=delta;if(row.qty<=0)cart=cart.filter(x=>x.key!==key);renderCart()}
+function cartTotal(){return cart.reduce((sum,x)=>sum+x.unitPrice*x.qty,0)}
+function renderCart(){
+  const list=document.getElementById('cart-list'),count=cart.reduce((sum,x)=>sum+x.qty,0);
+  document.getElementById('nav-count').textContent=count;document.getElementById('total').innerHTML=`${money(cartTotal())} <small>TZS</small>`;document.getElementById('checkout-btn').disabled=!cart.length;
+  if(!cart.length){list.innerHTML='<div class="empty"><span class="empty-icon">♧</span>Your cart is waiting for its first item.</div>';return}
+  list.innerHTML=cart.map(x=>`<div class="cart-item"><div><div class="cart-name">${x.qty}× ${x.item}</div><div class="cart-meta">${x.service==='washPress'?'Wash &amp; Press':'Dry Only'} · ${money(x.unitPrice)} TZS each</div></div><div><div class="cart-price">${money(x.unitPrice*x.qty)} TZS</div><div class="cart-actions"><button type="button" aria-label="Decrease" onclick="changeCart('${x.key.replace(/'/g,"\\'")}',-1)">−</button><button type="button" aria-label="Increase" onclick="changeCart('${x.key.replace(/'/g,"\\'")}',1)">+</button><button class="remove" type="button" onclick="changeCart('${x.key.replace(/'/g,"\\'")}',-${x.qty})">Remove</button></div></div></div>`).join('');
+}
+
+const dialog=document.getElementById('checkout-dialog');
+document.getElementById('checkout-btn').onclick=()=>{document.getElementById('dialog-total').textContent=`${money(cartTotal())} TZS`;dialog.showModal()};
+document.getElementById('close-dialog').onclick=()=>dialog.close();
+dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
+document.getElementById('checkout-form').addEventListener('submit',submitOrder);
+
+async function submitOrder(e){
+  e.preventDefault(); if(!cart.length)return;
+  const sendBtn=document.getElementById('send-btn'),status=document.getElementById('checkout-status');sendBtn.disabled=true;sendBtn.textContent='Saving your order…';status.textContent='';
+  const now=new Date(),orderId=`YL-${now.getFullYear()}-${String(Date.now()).slice(-6)}`;
+  const items=cart.map(x=>({item:x.item,category:x.category,qty:x.qty,service:x.service==='washPress'?'Wash & Press':'Dry Only',unitPrice:x.unitPrice,subtotal:x.qty*x.unitPrice}));
+  const order={orderId,customerName:document.getElementById('customer-name').value.trim(),phone:document.getElementById('customer-phone').value.trim(),branch:document.getElementById('customer-branch').value,pickupLocation:document.getElementById('pickup-location').value.trim(),notes:document.getElementById('customer-notes').value.trim(),dateReceived:now.toISOString().split('T')[0],createdAt:now.toISOString(),items,total:cartTotal(),status:'Received',source:'Website Checkout',serviceType:'Mixed laundry'};
+  try{const saved=JSON.parse(localStorage.getItem('yassersCustomerOrders')||'[]');saved.unshift(order);localStorage.setItem('yassersCustomerOrders',JSON.stringify(saved.slice(0,100)))}catch(err){}
+  if(ADMIN_SCRIPT_URL!=='PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE'){try{await fetch(ADMIN_SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'newOrder',...order})})}catch(err){}}
+  const lines=items.map(x=>`• ${x.qty}x ${x.item} — ${x.service} (${money(x.subtotal)} TZS)`).join('\n');
+  const message=`Hello RESAYLE Laundry, I would like to place an order.\n\nOrder: ${orderId}\nName: ${order.customerName}\nPhone: ${order.phone}\nBranch: ${order.branch}\nPickup: ${order.pickupLocation}\n\n${lines}\n\nEstimated total: ${money(order.total)} TZS${order.notes?`\nNotes: ${order.notes}`:''}\n\nPlease confirm my pickup. Thank you.`;
+  status.textContent=`Order ${orderId} saved. Opening WhatsApp…`;sendBtn.textContent='Opening WhatsApp…';
+  setTimeout(()=>{window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,'_blank','noopener');cart=[];renderCart();dialog.close();e.target.reset();sendBtn.disabled=false;sendBtn.textContent='Save & send order on WhatsApp'},450);
+}
+loadPriceList();
+</script>
+</body>
+</html>
