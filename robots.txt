@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /*.gs$
+
+Sitemap: https://resaylez.com/sitemap.xml
